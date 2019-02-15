@@ -1,0 +1,84 @@
+.title p{
+    padding: 15px 5px;
+    font-size: 18px;
+    margin: 0;
+    border-bottom: 1px solid #cccccc;
+}
+.pro_price {
+    border-bottom: 1px solid #cccccc;
+    padding: 12px 5px;
+    font-size: 14px;
+}
+.pro_price .price {
+    font-size: 22px;
+    color: #ff0000;
+}
+.pro_price .oldPrice {
+    text-decoration: line-through;
+    color: #cccccc;
+    font-size: 12px;
+}
+.pro_price span:nth-of-type(n+2) {
+    margin-left: 15px;
+}
+.pro_size {
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 5px;
+}
+.pro_size a {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid red;
+}
+.pro_size a.now{
+    background-color: orange;
+}
+.pro_count {
+    border-bottom: 1px solid #cccccc;
+    /*padding: 15px 5px;*/
+    font-size: 14px;
+    vertical-align: middle;
+}
+.pro_count a{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+.pro_count a span{
+    font-size: 14px;
+    color: #cccccc;
+}
+
+
+.pro_count input{
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    line-height: 22px;
+    text-align: center;
+}
+.tab_control a {
+    display: block;
+    width: 33.3333%;
+    height: 55px;
+    line-height: 40px;
+    color: #ffffff;
+    padding-top: 10px;
+    float: left;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+}
+.detail img{
+    width: 100%;
+    display: block;
+}

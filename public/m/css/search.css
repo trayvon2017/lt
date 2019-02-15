@@ -1,0 +1,87 @@
+.search_box {
+    margin-top: 12px;
+    padding: 0 12px;
+}
+.search_box input,form,button{
+    margin: 0;
+    padding: 0;
+}
+.search_box input{
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    border: 1px solid #006699;
+    font-size: 12px;
+    background-color: #fff;
+    padding-left: 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+.search_box a{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 60px;
+    background-color: #006699;
+    border: 1px solid #006699;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+/*ËÑË÷ÀúÊ·*/
+.search_history {
+    margin-top: 10px;
+    padding: 0 12px;
+    font-size: 16px;
+}
+.search_history .search_history_desc span:first-of-type{
+    float: left;
+
+}
+.search_history .search_history_desc a{
+    float: right;
+    color: #ff0000;
+}
+.history_list {
+    width: 100%;
+}
+.history_list ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.history_list ul li{
+    width: 100%;
+    border: 1px solid #cccccc;
+}
+.history_list ul li:nth-of-type(n+2){
+    border-top: none;
+}
+.sh_item {
+    height: 20px;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 20px;
+}
+.sh_item table {
+    width: 200px;
+}
+.sh_item span {
+    float: left;
+    font-size: 16px;
+}
+.sh_item a,
+.sh_item a span{
+    display: block;
+    height: 100%;
+    line-height: 20px;
+    float: right;
+    font-size: 16px;
+}
