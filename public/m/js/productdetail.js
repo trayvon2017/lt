@@ -34,5 +34,24 @@ $(function () {
             $('#count').val(count);
         }
     });
-
+    /*添加购物车按钮*/
+    $('.tab_control a:nth-of-type(2)').on('tap', function () {
+        $.ajax({
+            url: '/cart/addCart',
+            type:'POST',
+            data:{
+                productId:1,
+                num:1,
+                size:1
+            },
+            dataType: 'json',
+            success: function (data) {
+                if(data.success){
+                    location.href = 'cart.html';
+                }else if(data.error){
+                    location.href = 'user/login.html?returnUrl=/m/productdetail.html?id='+1;
+                }
+            }
+        });
+    });
 });

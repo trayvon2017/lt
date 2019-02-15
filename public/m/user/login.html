@@ -26,15 +26,21 @@
         <!--mui区域滚动-->
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
-                <form action="#">
+                <form class="mui-input-group">
                     <div class="mui-input-row">
-                        <input type="text" placeholder="用户名/手机号">
+                        <label>用户名</label>
+                        <input id="username" type="text" class="mui-input-clear" placeholder="请输入用户名">
                     </div>
-                    <div class="mui-input-row mui-password">
-                        <input type="password" class="mui-input-password" data-input-password="3">
-                        <span class="mui-icon mui-icon-eye"></span>
+                    <div class="mui-input-row">
+                        <label>密码</label>
+                        <input id="password" type="password" class="mui-input-password" placeholder="请输入密码">
+                    </div>
+                    <div class="mui-button-row">
+                        <button id="login" type="button" class="mui-btn mui-btn-primary" >登录</button>
+                        <button id="cancel" type="button" class="mui-btn mui-btn-danger" >取消</button>
                     </div>
                 </form>
+                <a class="register" href="#">免费注册</a>
             </div>
         </div>
     </div>
