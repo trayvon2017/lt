@@ -1,0 +1,92 @@
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    padding: 45px 0 85px 0;
+}
+
+/*tab页签*/
+.order {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    background-color: #cccccc;
+    position: fixed;
+    bottom: 55px;
+    left: 0;
+}
+.order a{
+    position: absolute;
+    height: 30px;
+    width: 80px;
+    background-color: #ff0000;
+    color: #ffffff;
+    right: 0;
+    top: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+.order #totalPrice{
+    color: red;
+}
+/*单条内容*/
+.cart_list li span {
+    margin-left: 10px;
+}
+.cart_list li span.price {
+    color: red;
+}
+.cart_list li span.oldPrice {
+    color: #cccccc;
+    text-decoration: line-through;
+}
+/*edit*/
+.pro_size {
+    border-bottom: 1px solid #cccccc;
+    padding: 15px 5px;
+}
+.pro_size a {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid red;
+    margin-left: 5px;
+}
+.pro_size a.now{
+    background-color: orange;
+}
+.pro_count {
+    border-bottom: 1px solid #cccccc;
+    /*padding: 15px 5px;*/
+    font-size: 14px;
+    vertical-align: middle;
+}
+.pro_count a{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #cccccc;
+}
+.pro_count a span{
+    font-size: 14px;
+    color: #cccccc;
+}
+
+
+.pro_count input{
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    line-height: 22px;
+    text-align: center;
+}

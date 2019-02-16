@@ -27,6 +27,9 @@
         <!--mui区域滚动-->
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
+                <!--此间内容动态渲染-->
+            </div>
+            <script type="text/template" id="pro_detail">
                 <!--轮播-->
                 <div class="mui-slider">
                     <div class="mui-slider-group">
@@ -44,55 +47,40 @@
                 </div>
                 <!--标题-->
                 <div class="title">
-                    <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                    <p><%=proName%></p>
                 </div>
                 <!--价格-->
                 <div class="pro_price">
-                    <span>价格:</span><span class="price">&yen;488</span><span class="oldPrice">&yen;888</span>
+                    <span>价格:</span><span class="price">&yen;<%=price%></span><span class="oldPrice">&yen;<%=oldPrice%></span>
                 </div>
                 <form action="#">
                     <!--尺码-->
                     <div class="pro_size">
                         <label for="size">尺码:</label>
                         <input id="size" name="size" type="text" hidden/>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
-                        <a href="#">34</a>
+                        <%
+                            var sizearr = size.split('-');
+                            var min = sizearr[0];
+                            var max = sizearr[1];
+                         for(var i=min;i<=max;i++){ %>
+                            <a href="javascript:void(0);"><%=i%></a>
+                        <% } %>
                     </div>
                     <!--数量-->
                     <div class="pro_count">
-                        <label for="count">数量:</label><a class="dec" href="#"><span class="fa fa-minus"></span></a><input id="count" name="count" type="number" data-max="20" value="1" readonly/><a
-                            href="#" class="inc"><span class="fa fa-plus"></span></a><span>库存:</span><span>20</span>
+                        <label for="count">数量:</label><a class="dec" href="#"><span class="fa fa-minus"></span></a><input id="count" name="count" type="number" data-max="<%=num%>" value="1" readonly/><a
+                            href="#" class="inc"><span class="fa fa-plus"></span></a><span>库存:</span><span><%=num%></span>
                     </div>
                 </form>
                 <div class="detail">
-                    <img src="/mobile/images/detail.jpg" alt=""/>
-                    <img src="/mobile/images/detail.jpg" alt=""/>
-                    <img src="/mobile/images/detail.jpg" alt=""/>
-                    <img src="/mobile/images/detail.jpg" alt=""/>
+                    <% for(var i=0;i<pic.length;i++){ %>
+                    <img src="<%=pic[i].picAddr%>" />
+                    <% } %>
                 </div>
-
-            </div>
+            </script>
         </div>
     </div>
+
     <!--底部页签-->
     <footer class="tab_control">
         <a href="cart.html" class="mui-btn mui-btn-primary fa fa-shopping-cart"></a>

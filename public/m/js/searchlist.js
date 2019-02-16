@@ -29,7 +29,6 @@ $(function () {
     console.log(data);
     /*显示到搜索框*/
     $('.search_box input').val(content);
-    var lastPage = 1;
     /*下拉刷新,上啦加载*/
     mui.init({
         pullRefresh : {
@@ -37,6 +36,7 @@ $(function () {
             down: {
                 auto: true,//首次加载自动上拉刷新一次
                 callback : function () {
+                    data.page=1;
                     /*ajax请求查询产品*/
                     $.ajax({
                         url:'/product/queryProduct',
@@ -63,7 +63,7 @@ $(function () {
             up: {
                 auto: false,//首次加载自动上拉刷新一次
                 callback : function () {
-                    lastPage++;
+                    data.page++;
                     /*ajax请求查询产品*/
                     $.ajax({
                         url:'/product/queryProduct',
