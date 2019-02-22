@@ -14,7 +14,7 @@ $(function () {
     };
     mui('.mui-scroll-wrapper').scroll(muiScrollOptions);
     /*首次加载渲染分类*/
-    $.ajax({
+    ajax({
         url: '/category/queryTopCategory',
         type: 'GET',
         dataType : 'json',

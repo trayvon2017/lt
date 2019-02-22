@@ -47,7 +47,7 @@
                                         <img class="mui-media-object mui-pull-left" src="<%=data[i].pic[0].picAddr%>">
                                         <div class="mui-media-body">
                                             <p class='mui-ellipsis'><%=data[i].proName%></p>
-                                            <span class="price">&yen;<%=data[i].price%></span>
+                                            <span data-price="<%=data[i].price%>" class="price">&yen;<%=data[i].price%></span>
                                             <span class="oldPrice">&yen;<%=data[i].oldPrice%></span>
                                             <span class="size">尺码:<%=data[i].size%></span>
                                             <span class="num">数量:<%=data[i].num%>双</span>
@@ -63,13 +63,13 @@
     </div>
     <!--底部结算按钮-->
     <div class="order">
-        订单总额: <span id="totalPrice">&yen;0.0</span><a href="javascript:void(0);">生成订单</a>
+        订单总额: &yen;<span id="totalPrice">0.0</span><a href="javascript:void(0);">生成订单</a>
     </div>
     <!--底部页签-->
     <footer class="tab_control">
         <a href="index.html"><span class="fa fa-home"></span><p>首页</p></a>
         <a href="category.html"><span class="fa fa-bars"></span><p>分类</p></a>
-        <a class="now" href="javascript;"><span class="fa fa-shopping-cart"></span><p>购物车</p></a>
+        <a class="now" href="javascript:void(0);"><span class="fa fa-shopping-cart"></span><p>购物车</p></a>
         <a href="user.html"><span class="fa fa-user"></span><p>个人中心</p></a>
     </footer>
 </div>

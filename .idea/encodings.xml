@@ -8,6 +8,9 @@
     <file url="file://$PROJECT_DIR$/public/m/js/productdetail.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/m/js/search.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/m/js/searchlist.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/m/js/user/add-address.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/m/js/user/address.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/m/js/user/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/m/js/user/password.js" charset="UTF-8" />
   </component>
 </project>

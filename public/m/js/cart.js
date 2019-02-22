@@ -122,7 +122,40 @@ $(function () {
         });
     });
     $('.cart_list').on('tap','#delete_pro', function () {
-        alert(2);
+        /*删除单条购物车数据*/
+        $item = $(this).parent().parent();
+        var li = this.parentNode.parentNode;
+        console.dir(li);
+        var pid = $item.data('pid');
+        var id = $item.data('id');
+        /*ajax删除*/
+        $.ajax({
+            url: '/cart/deleteCart',
+            data: {id: id},
+            type: 'GET',
+            dataType: 'json',
+            success: function(data){
+                if(data.success && data.success == true){
+                    /*数据库删除成功*/
+                    /*页面删除*/
+                    //li.parentNode.removeChild(li);
+                    $(li).remove();
+                }
+            }
+        });
+
+    });
+    /*总价计算*/
+    $('.cart_list').on('change','.mui-table-cell input', function () {
+        var $checkList = $('.cart_list').find('input');
+        var totalPrice=0;
+        $checkList.each(function () {
+            console.log($(this).prop('checked'));
+            if($(this).prop('checked')){
+                totalPrice += $(this).siblings('div').children('.price').data('price');
+            }
+        });
+        $('#totalPrice').html(totalPrice);
     });
     /*选择尺码,以及数量控制*/
     $('body').on('tap','.pro_size a', function () {

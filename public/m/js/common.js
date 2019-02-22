@@ -48,7 +48,7 @@ function getValue(paramName){
  * @param params ajax请求的一些参数
  */
 function ifLoginAjaxRequest(params){
-    $.ajax({
+    App.ajax({
         url: params.url,
         type: params.type || 'GET',
         data: params.data || '',
@@ -61,4 +61,32 @@ function ifLoginAjaxRequest(params){
             }
         }
     });
+}
+if(!App) var App = {};
+var mask = mui.createMask(function () {
+    
+});//callback为用户点击蒙版时自动执行的回调；
+
+
+App.ajax = function (options) {
+    var timer;
+    $.ajax({
+        url: options.url,
+        data: options.data || '',
+        dataType: options.dataType || 'GET',
+        beforeSend: function(){
+            mask.show();//显示遮罩
+            timer = setInterval(function () {
+                console.log('开始ajax');
+
+            },1000);
+
+        },
+        success: function (data) {
+            options.success && options.success(data);
+            clearInterval(timer);
+            console.log('ajax结束');
+            mask.close();//关闭遮罩
+        }
+    })
 }

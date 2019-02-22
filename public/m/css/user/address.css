@@ -1,0 +1,30 @@
+.mui-table-cell {
+    /*width: 100%;*/
+}
+.mui-table-cell {
+    display: block;
+}
+.mui-table-cell .info {
+    /*width: 100%;*/
+    display: inline-block;
+}
+.mui-table-cell > span{
+    position: absolute;
+    top: 50%;
+    font-size: 16px;
+    margin-top: -8px;
+    right: 0;
+}
+ul {
+    padding: 0;
+}
+.mui-table-view-cell {
+    background-color: #fff;
+    /*padding: 0;*/
+}
+li{
+    border-bottom: 1px solid #006699;
+}
+li:nth-last-of-type(1) {
+    border-bottom: none;
+}

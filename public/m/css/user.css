@@ -1,0 +1,17 @@
+.content .mui-scroll {
+    position: relative;
+}
+
+.content .user_info .info {
+    display: inline-block;
+}
+.content li:first-of-type .user_info .more{
+    margin-top: 15px;
+}
+.logout {
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /*margin: 0 auto;*/
+}
